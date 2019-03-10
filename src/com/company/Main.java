@@ -11,7 +11,6 @@ public class Main {
         System.out.println(calculator.calculate('^', 2, 3));
         System.out.println(calculator.calculate('#', 2, 3));
         System.out.println(calculator.calculate('!', 2, 3));
-
     }
 
 }
