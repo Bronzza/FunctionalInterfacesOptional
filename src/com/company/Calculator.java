@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class Calculator {
 
-    final String message = "Incorrect sybmol, enter: +, -, *, ^, #, !";
+    private final String MESSAGE = "Incorrect sybmol, enter: +, -, *, ^, #, !";
     final private Map<Character, BinaryOperator<Double>> operations = new HashMap<>() {
         {
             operations.put('+', (numb, numb2) -> numb + numb2);
@@ -23,8 +23,7 @@ public class Calculator {
 
     public double calculate(char operation, double number1, double number2) {
         return Optional.ofNullable(operations.get(operation))
-                .orElseThrow(() -> new IllegalArgumentException(message))
+                .orElseThrow(() -> new IllegalArgumentException(MESSAGE))
                 .apply(number1, number2);
     }
-
 }
