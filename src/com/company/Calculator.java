@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class Calculator {
 
-    private final String MESSAGE = "Incorrect sybmol, enter: +, -, *, ^, #, !";
+    public static final String MESSAGE = "Incorrect sybmol, enter: +, -, *, ^, #, !";
     final private Map<Character, BinaryOperator<Double>> operations = new HashMap<>() {
         {
             operations.put('+', (numb, numb2) -> numb + numb2);
